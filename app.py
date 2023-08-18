@@ -47,7 +47,9 @@ with open('datos.csv', 'a', newline='') as csvfile:
             csvwriter = csv.writer(csvfile)
             csvwriter.writerow(data_entry.split(',')) 
     # Registrar los datos en el archivo
-
+with open('datos.csv', 'a', newline='') as csvfile:
+            csvwriter = csv.writer(csvfile)
+            csvwriter.writerow(data_entry.split(',')) 
     # Regresar un mensaje de éxito
     return jsonify({'status' : 'success' , 
                     'message' : 'Datos registrados'})
