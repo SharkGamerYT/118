@@ -43,7 +43,9 @@ def save():
     data_entry = date + "," + product + "," + review + "," + sentiment
 
     # Abrir el archivo en modo "append"
-
+with open('datos.csv', 'a', newline='') as csvfile:
+            csvwriter = csv.writer(csvfile)
+            csvwriter.writerow(data_entry.split(',')) 
     # Registrar los datos en el archivo
 
     # Regresar un mensaje de éxito
